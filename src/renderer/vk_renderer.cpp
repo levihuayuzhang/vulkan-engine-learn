@@ -1,31 +1,23 @@
+//
+// Created by zhy on 1/2/23.
+//
 #include <vulkan/vulkan.h>
-#include <iostream>
-#include <vulkan/vulkan_core.h>
+#include "vk_renderer.h"
 
-int main()
+void vk_init()
 {
     VkApplicationInfo appInfo = {};
     appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     appInfo.pApplicationName = "Pong";
     appInfo.pEngineName = "ph1gine";
 
-    VkDeviceCreateInfo deviceInfo {};
-    deviceInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
-
 
     VkInstanceCreateInfo instanceInfo = {};
     instanceInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
     instanceInfo.pApplicationInfo = &appInfo;
-
+//    instanceInfo.flags |= VK_INSTANCE_CREATE_ENUMERATE_PORTABILITY_BIT_KHR;
 
     VkInstance instance;
 
     VkResult result = vkCreateInstance(&instanceInfo, 0, &instance);
-
-    if (result == VK_SUCCESS)
-    {
-        std::cout << "Successfully Create Vulkan Instance..." << std::endl;
-    }
-
-    return 0;
 }
