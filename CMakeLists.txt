@@ -13,4 +13,4 @@ find_package(JPEG REQUIRED)
 find_package(Vulkan REQUIRED)
 
 target_include_directories(vulkan-learn PRIVATE ${GLFW_INCLUDE_DIRS} ${GLEW_INCLUDE_DIR} ${JPEG_INCLUDE_DIR} ${GLM_INCLUDE_DIR} ${VULKAN_INCLUDE_DIR})
-target_link_libraries(vulkan-learn PRIVATE glfw GLEW::GLEW ${JPEG_LIBRARIES} Vulkan::Vulkan)
+target_link_libraries(vulkan-learn PRIVATE glfw ${GLEW_LIBRARIES} ${JPEG_LIBRARIES} Vulkan::Vulkan)

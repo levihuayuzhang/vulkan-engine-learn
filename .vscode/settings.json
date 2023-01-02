@@ -1,7 +1,0 @@
-{
-    "C_Cpp.default.includePath": [
-        "${workspaceFolder}/src",
-        "${VULKAN_SDK}/Include"
-    ],
-    "cmake.configureOnOpen": false
-}
